@@ -1,7 +1,9 @@
 //import {arrayOfWorks} from './listworks.js';
 window.addEventListener('DOMContentLoaded',() => {
+    const bodyOfhtml = document.querySelector('body');
     const worksListul = document.querySelector('.person-works_container__list'),
             skillsList = document.querySelector('.skills_list');
+
     const httpsText = 'https://';
     const imgUrlText = 'img/';
     const arrayOfWorks = [
@@ -110,17 +112,15 @@ window.addEventListener('DOMContentLoaded',() => {
     function createElementsList(arr, arrTextSkills){
         arrTextSkills.forEach(elem => {
             skillsList.innerHTML += `
-                <li class="skills_list-item">${elem.name}<span class="skills_list-item-info">${elem.name}: ${elem.about}</span>,&nbsp</li>
+                <li class="skills_list-item black-text-color">${elem.name}<span class="skills_list-item-info">${elem.name}: ${elem.about}</span>,&nbsp</li>
             `;
         });
         skillsList.addEventListener('mouseover',(e) => {
             e.preventDefault();
             if(e.target && e.target.classList.contains('skills_list-item')){
                 document.querySelectorAll('.modal').forEach(items => {
-                    console.log(items);
                     items.classList.remove('modal');
                 });
-                console.log(e.target.children);
                 e.target.children[0].classList.add('modal');
             } 
 
@@ -128,7 +128,6 @@ window.addEventListener('DOMContentLoaded',() => {
         document.body.addEventListener('click',(e) =>{
             if(!e.target.classList.contains('modal')){
                 document.querySelectorAll('.modal').forEach(items => {
-                    console.log(items);
                     items.classList.remove('modal');
                 });
             }
@@ -167,6 +166,30 @@ window.addEventListener('DOMContentLoaded',() => {
         
     }
     
+    const checkbox = document.querySelector('#toggle_checkbox[type=checkbox]'),
+            rightSide = document.querySelector('.right-side');
+            
+    checkbox.addEventListener('click',(e) =>{
+        bodyOfhtml.classList.remove('newbg');
+        rightSide.classList.remove('black');
+        let listBtns = document.querySelectorAll('.black-text-color');
+        let listBtnsWhite = document.querySelectorAll('.white-text-color');
+
+        
+        if (checkbox.checked) {
+            bodyOfhtml.classList.add('newbg');
+            rightSide.classList.add('black');
+            listBtns.forEach(item =>{
+                item.classList.remove('black-text-color');
+                item.classList.add('white-text-color');
+            });
+        }else if(!checkbox.checked){
+            listBtnsWhite.forEach( item => {
+                item.classList.add('black-text-color');
+            });
+        }
+    });
+
     createElementsList(arrayOfWorks,skillsListItems);
 
 });
