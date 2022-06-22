@@ -30,6 +30,7 @@ body{
     transition: all 0.2s;
     background-color: #000 !important;
 }
+
 .black-text-color{
     transition: all 0.5s;
     color: #000 !important;
@@ -68,9 +69,21 @@ body{
 }
 .photo-container{
     height: 250px;
+    position: relative;
 }
 .photo-container img{
     height: 100%;
+}
+.photo-container::before{
+    content:'';
+    position: absolute;
+    z-index: 0;
+    width: 92%;
+    height: 92%;
+    left: 10px;
+    bottom: 10px;
+    outline: 15px  solid #fff;
+    border-radius: 50%;
 }
 /* CONTACT */
 .contact,
@@ -112,7 +125,7 @@ body{
     transition: all .3s;
 }
 .contact_social-link a svg:hover{
-    fill: rgb(0, 0, 0);
+    fill: rgb(206, 240, 153);
 }
 /* EDUCATION */
 .education-container,
@@ -201,7 +214,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: example 2s ;
 }
+@keyframes example {
+    from {transform: scale(0.5);
+    opacity: 0;}
+    to {transform: scale(1);
+        opacity: 1;}
+  }
 
 .person-works_container__list-item  img{
     height: 100%;
@@ -237,16 +257,20 @@ body{
     margin-bottom: 10px;
     width: 200px;
     position: absolute;
-    background-color: rgb(83, 104, 204);
-    color: #fff;
     border-radius: 5px;
-    border: 2px solid transparent;
+    border: 5px solid rgb(83, 104, 204);
     padding:15px 5px;
     transition: all .3s;
     font-size: 20px;
+    font-weight: bolder;
     left: calc(50% - 100px);
     bottom: -100px;
+    background-color: #fff;;
 }
+/* .normal{
+    background-color: #fff ;
+    color: #000;
+} */
 .person-works_container-btn:hover{
     cursor:pointer;
     transform: scale(1.05);

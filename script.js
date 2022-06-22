@@ -25,7 +25,6 @@ window.addEventListener('DOMContentLoaded',() => {
                 });
                 e.target.children[0].classList.add('modal');
             } 
-
         });
         document.body.addEventListener('click',(e) =>{
             if(!e.target.classList.contains('modal')){
@@ -36,16 +35,22 @@ window.addEventListener('DOMContentLoaded',() => {
         });
         let timeSwitcher = 6;
 //btn for more wiev works
-        function createBtnForMoreWiev(){
-            const worksItems = document.querySelectorAll('.person-works_container__list-item');
-
+        function createdBtn(){
             let newBtn = document.createElement('button');
             newBtn.classList.add('person-works_container-btn');
+            // if(localStorage.getItem('night')){
+            //     newBtn.classList.add('yellow' , 'black-text-color');
+            // }else{
+            //     newBtn.classList.add('normal');
+            // }
             newBtn.textContent = `More / Less`;
             worksListul.append(newBtn);
+            return newBtn;
+        }
+        function createBtnForMoreWiev(item){
+            const worksItems = document.querySelectorAll('.person-works_container__list-item');
             let count = 6;
-
-            newBtn.addEventListener('click', (e) => {
+            item.addEventListener('click', (e) => {
                 
                 if(timeSwitcher >= arr.length){
                     timeSwitcher = timeSwitcher - count;
@@ -56,11 +61,9 @@ window.addEventListener('DOMContentLoaded',() => {
                     item.remove();
                 });
                 e.target.remove();
-    
                 render();
             });
         }
-
 //btn for more wiev works
         function render(){
             arr.forEach((elem,id) => {
@@ -74,46 +77,53 @@ window.addEventListener('DOMContentLoaded',() => {
                     </li>`;
                 }
             });
-            createBtnForMoreWiev();
+            createBtnForMoreWiev(createdBtn());
         }
         render();
     }
 
     const checkbox = document.querySelector('#toggle_checkbox[type=checkbox]'),
-            rightSide = document.querySelector('.right-side');
+            rightSide = document.querySelector('.right-side'),
+            leftSide = document.querySelector('.left-side');
 
     function colorized(){
         localStorage.setItem('night', true);
+        let btnForMoreWorks = document.querySelector('.person-works_container-btn');
         let listBtns = document.querySelectorAll('.black-text-color');
         let listBtnsWhite = document.querySelectorAll('.white-text-color');
-        
         bodyOfhtml.classList.remove('newbg');
         rightSide.classList.remove('black');
-        
-            if (checkbox.checked) {
+        leftSide.classList.remove('black');
+
+
+            if (checkbox.checked && localStorage.getItem('night')) {
                 bodyOfhtml.classList.add('newbg');
                 rightSide.classList.add('black');
+                leftSide.classList.add('black');
+                //btnForMoreWorks.classList.add('yellow' , 'black-text-color');
+                
                 listBtns.forEach(item =>{
                     item.classList.remove('black-text-color');
                     item.classList.add('white-text-color');
                 });
             }else if(!checkbox.checked){
                 localStorage.removeItem('night');
-
+                //btnForMoreWorks.classList.remove('yellow' , 'black-text-color');
                 listBtnsWhite.forEach( item => {
                     item.classList.add('black-text-color');
                 });
-
             }
     }
     checkbox.addEventListener('click', colorized);
+    setTimeout(function(){
+        if(localStorage.getItem('night')){
+            checkbox.checked = true;
+            colorized();
+        }else{
+            checkbox.checked = false;
+        }
+    },300);
 
-    if(localStorage.getItem('night')){
-        checkbox.checked = true;
-        colorized();
-    }else{
-        checkbox.checked = false;
-    }
     
     //createElementsList(arrayOfWorks,skillsListItems);
 });
