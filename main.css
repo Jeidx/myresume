@@ -22,7 +22,6 @@ body{
 .newbg{
     background-image: url(img/bgtree.jpg);
 }
-
 .white-text-color{
     color: #fff !important;
     transition: all 0.5s;
@@ -182,6 +181,7 @@ body{
 /* person-works */
 .person-works{
     padding: 10px;
+    padding-bottom: 100px;
 }
 
 .person-works_container__list{
@@ -189,6 +189,7 @@ body{
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
     margin-top: 20px;
+    position: relative;
 }
 .person-works_container__list-item{
     width: 200px;
@@ -233,15 +234,18 @@ body{
     align-items: center;
 }
 .person-works_container-btn{
+    margin-bottom: 10px;
+    width: 200px;
+    position: absolute;
     background-color: rgb(83, 104, 204);
-    width: 100%;
     color: #fff;
     border-radius: 5px;
     border: 2px solid transparent;
     padding:15px 5px;
     transition: all .3s;
     font-size: 20px;
-    grid-column: 2/3;
+    left: calc(50% - 100px);
+    bottom: -100px;
 }
 .person-works_container-btn:hover{
     cursor:pointer;
@@ -412,9 +416,7 @@ label
 
 /* RESPONSIVE */
 @media screen and (max-width: 1150px) {
-    .person-works_container-btn{
-        grid-column: 1/3;
-    }
+
 }
 
 
@@ -475,9 +477,6 @@ label
     .skills_list{
         justify-content: center;
     }
-    .person-works_container-btn{
-        grid-column: 1/3;
-    }
 
 }
 
@@ -488,9 +487,6 @@ label
     .education, .contact{
         width: 100%;
         padding: 10px 0 15px 0;
-    }
-    .person-works_container-btn{
-        grid-column: 1/3;
     }
     label{
 
@@ -513,8 +509,5 @@ label
     .shadow{
         z-index: 2;
         opacity: 1;
-    }
-    .person-works_container-btn{
-        grid-column: 1/2;
     }
 }

@@ -34,8 +34,34 @@ window.addEventListener('DOMContentLoaded',() => {
                 });
             }
         });
-        
         let timeSwitcher = 6;
+//btn for more wiev works
+        function createBtnForMoreWiev(){
+            const worksItems = document.querySelectorAll('.person-works_container__list-item');
+
+            let newBtn = document.createElement('button');
+            newBtn.classList.add('person-works_container-btn');
+            newBtn.textContent = `More / Less`;
+            worksListul.append(newBtn);
+            let count = 6;
+
+            newBtn.addEventListener('click', (e) => {
+                
+                if(timeSwitcher >= arr.length){
+                    timeSwitcher = timeSwitcher - count;
+                }else{
+                    timeSwitcher += count;
+                }
+                worksItems.forEach(item => {
+                    item.remove();
+                });
+                e.target.remove();
+    
+                render();
+            });
+        }
+
+//btn for more wiev works
         function render(){
             arr.forEach((elem,id) => {
                 if(id < timeSwitcher){
@@ -48,23 +74,9 @@ window.addEventListener('DOMContentLoaded',() => {
                     </li>`;
                 }
             });
+            createBtnForMoreWiev();
         }
         render();
-
-        setTimeout(function(){
-            let btnShow = worksListul.innerHTML += `<button class='person-works_container-btn'>open more</button>`;
-        },1000);
-        worksListul.addEventListener('click', (e) => {
-            if(e.target && e.target.classList.contains('person-works_container-btn')){
-                const worksItems = document.querySelectorAll('.person-works_container__list-item');
-                timeSwitcher = arr.length;
-                e.target.style.cssText = 'display:none;';
-                worksItems.forEach(item => {
-                    item.remove();
-                });
-                render();
-            }
-        });
     }
 
     const checkbox = document.querySelector('#toggle_checkbox[type=checkbox]'),
