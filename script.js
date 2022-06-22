@@ -1,113 +1,15 @@
-//import {arrayOfWorks} from './listworks.js';
 window.addEventListener('DOMContentLoaded',() => {
     const bodyOfhtml = document.querySelector('body');
     const worksListul = document.querySelector('.person-works_container__list'),
             skillsList = document.querySelector('.skills_list');
 
-    const httpsText = 'https://';
-    const imgUrlText = 'img/';
-    const arrayOfWorks = [
-        {
-            preloadText : 'REACT',
-            name : 1,
-            img: `${imgUrlText}tesla.png`,
-            link: `${httpsText}jeidx.github.io/`,
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}zabota.png`,
-            link: `${httpsText}chatsapp-pi.vercel.app/`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}testlogo.png`,
-            link: `${httpsText}jeidx.github.io/verstka-tz/`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}табуретки_1.png`,
-            link: `${httpsText}jeidx.github.io/taburetki/`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}travel.png`,
-            link: `${httpsText}jeidx.github.io/3projectzaliv/`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}blog.png`,
-            link: `${httpsText}jeidx.github.io/12222/`
-        },
-        {
-            preloadText : 'REACT',
-            name : 1,
-            img: `${imgUrlText}chatjs.png`,
-            link: `${httpsText}chatsapp-pi.vercel.app/`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}marble.png`,
-            link: `${httpsText}jeidx.github.io/2st-project-fixed/#`
-        },
-        {
-            preloadText : 'HTML CSS',
-            name : 1,
-            img: `${imgUrlText}sushi.png`,
-            link: `${httpsText}jeidx.github.io/sushi.test/`
-        },
-        {
-            preloadText : 'REACT',
-            name : 1,
-            img: `${imgUrlText}poke.png`,
-            link: `${httpsText}vigilant-edison-ccf897.netlify.app/`
-        },
-        {
-            preloadText : 'JS CSS HTML',
-            name : 1,
-            img: `${imgUrlText}todo.png`,
-            link: `${httpsText}jeidx.github.io/litetodolist/`
-        },
-        {
-            preloadText : 'HTML CSS JS',
-            name : 1,
-            img: `${imgUrlText}pogoda.png`,
-            link: `${httpsText}jeidx.github.io/weatherapi/`
-        }
-    ];
-    
-
-    const skillsListItems = [
-        {
-            about : 'язык для структурирования и представления содержимого всемирной паутины',
-            name : 'HTML5',
-        },
-        {
-            about : 'формальный язык описания внешнего вида документа, написанного с использованием языка разметки',
-            name : 'CSS3',
-        },
-        {
-            about : 'мультипарадигменный язык программирования',
-            name : 'JavaScript',
-        },
-        {
-            about : 'JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов',
-            name : 'React',
-        },
-        {
-            about : 'распределённая система управления версиями',
-            name : 'Git',
-        },
-        {
-            about : 'метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей',
-            name : 'Scss',
-        }
-    ];
+           
+    async function fetchDataCards(){
+        fetch('db.json')
+            .then(res => res.json())
+            .then(res => createElementsList(res[0],res[1]));
+    }
+    fetchDataCards();
 
     function createElementsList(arr, arrTextSkills){
         arrTextSkills.forEach(elem => {
@@ -163,33 +65,43 @@ window.addEventListener('DOMContentLoaded',() => {
                 render();
             }
         });
-        
     }
-    
+
     const checkbox = document.querySelector('#toggle_checkbox[type=checkbox]'),
             rightSide = document.querySelector('.right-side');
-            
-    checkbox.addEventListener('click',(e) =>{
-        bodyOfhtml.classList.remove('newbg');
-        rightSide.classList.remove('black');
+
+    function colorized(){
+        localStorage.setItem('night', true);
         let listBtns = document.querySelectorAll('.black-text-color');
         let listBtnsWhite = document.querySelectorAll('.white-text-color');
-
         
-        if (checkbox.checked) {
-            bodyOfhtml.classList.add('newbg');
-            rightSide.classList.add('black');
-            listBtns.forEach(item =>{
-                item.classList.remove('black-text-color');
-                item.classList.add('white-text-color');
-            });
-        }else if(!checkbox.checked){
-            listBtnsWhite.forEach( item => {
-                item.classList.add('black-text-color');
-            });
-        }
-    });
+        bodyOfhtml.classList.remove('newbg');
+        rightSide.classList.remove('black');
+        
+            if (checkbox.checked) {
+                bodyOfhtml.classList.add('newbg');
+                rightSide.classList.add('black');
+                listBtns.forEach(item =>{
+                    item.classList.remove('black-text-color');
+                    item.classList.add('white-text-color');
+                });
+            }else if(!checkbox.checked){
+                localStorage.removeItem('night');
 
-    createElementsList(arrayOfWorks,skillsListItems);
+                listBtnsWhite.forEach( item => {
+                    item.classList.add('black-text-color');
+                });
 
+            }
+    }
+    checkbox.addEventListener('click', colorized);
+
+    if(localStorage.getItem('night')){
+        checkbox.checked = true;
+        colorized();
+    }else{
+        checkbox.checked = false;
+    }
+    
+    //createElementsList(arrayOfWorks,skillsListItems);
 });

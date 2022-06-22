@@ -25,11 +25,14 @@ body{
 
 .white-text-color{
     color: #fff !important;
+    transition: all 0.5s;
 } 
 .black{
+    transition: all 0.2s;
     background-color: #000 !important;
 }
 .black-text-color{
+    transition: all 0.5s;
     color: #000 !important;
 }
 .wrapper{
@@ -43,13 +46,15 @@ body{
 }
 /* LEFT-SIDE SECTION */
 .left-side{
-    background-color: rgb(24, 28, 49);
+    background-color: rgb(35, 35, 63);
     /* padding: 10px; */
     display: flex;
     flex-direction: column;
     width: 40%;
-    color: #fff;
-    
+    color: rgb(255, 255, 255);
+}
+.color-left-block{
+    background-color: rgb(35, 35, 63);
 }
 /* .photo, .contact,
 .education{

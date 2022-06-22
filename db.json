@@ -1,0 +1,82 @@
+[
+    [{
+        "preloadText": "REACT",
+        "name": 1,
+        "img": "img/tesla.png",
+        "link": "https://jeidx.github.io/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/zabota.png",
+        "link": "https://chatsapp-pi.vercel.app/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/testlogo.png",
+        "link": "https://jeidx.github.io/verstka-tz/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/табуретки_1.png",
+        "link": "https://jeidx.github.io/taburetki/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/travel.png",
+        "link": "https://jeidx.github.io/3projectzaliv/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/blog.png",
+        "link": "https://jeidx.github.io/12222/"
+    }, {
+        "preloadText": "REACT",
+        "name": 1,
+        "img": "img/chatjs.png",
+        "link": "https://chatsapp-pi.vercel.app/"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/marble.png",
+        "link": "https://jeidx.github.io/2st-project-fixed/#"
+    }, {
+        "preloadText": "HTML CSS",
+        "name": 1,
+        "img": "img/sushi.png",
+        "link": "https://jeidx.github.io/sushi.test/"
+    }, {
+        "preloadText": "REACT",
+        "name": 1,
+        "img": "img/poke.png",
+        "link": "https://vigilant-edison-ccf897.netlify.app/"
+    }, {
+        "preloadText": "JS CSS HTML",
+        "name": 1,
+        "img": "img/todo.png",
+        "link": "https://jeidx.github.io/litetodolist/"
+    }, {
+        "preloadText": "HTML CSS JS",
+        "name": 1,
+        "img": "img/pogoda.png",
+        "link": "https://jeidx.github.io/weatherapi/"
+    }],
+    [{
+        "about": "язык для структурирования и представления содержимого всемирной паутины",
+        "name": "HTML5"
+    }, {
+        "about": "формальный язык описания внешнего вида документа, написанного с использованием языка разметки",
+        "name": "CSS3"
+    }, {
+        "about": "мультипарадигменный язык программирования",
+        "name": "JavaScript"
+    }, {
+        "about": "JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов",
+        "name": "React"
+    }, {
+        "about": "распределённая система управления версиями",
+        "name": "Git"
+    }, {
+        "about": "метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей",
+        "name": "Scss"
+    }]
+]
