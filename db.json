@@ -8,7 +8,7 @@
         "preloadText": "HTML CSS",
         "name": 1,
         "img": "img/zabota.png",
-        "link": "https://chatsapp-pi.vercel.app/"
+        "link": "https://jeidx.github.io/form-pj-test/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
@@ -19,6 +19,11 @@
         "name": 1,
         "img": "img/табуретки_1.png",
         "link": "https://jeidx.github.io/taburetki/"
+    }, {
+        "preloadText": "PARALAX.js",
+        "name": 1,
+        "img": "img/island.png",
+        "link": "https://jeidx.github.io/sunshine/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
