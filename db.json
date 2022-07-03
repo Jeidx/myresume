@@ -24,6 +24,11 @@
         "name": 1,
         "img": "img/island.png",
         "link": "https://jeidx.github.io/sunshine/"
+    },  {
+        "preloadText": "HTML CSS JS",
+        "name": 1,
+        "img": "img/robot.png",
+        "link": "https://jeidx.github.io/robot/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
