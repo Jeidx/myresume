@@ -29,6 +29,12 @@
         "name": 1,
         "img": "img/robot.png",
         "link": "https://jeidx.github.io/robot/"
+    }, 
+    {
+        "preloadText": "JS API",
+        "name": 1,
+        "img": "img/world.png",
+        "link": "https://jeidx.github.io/cnf/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
