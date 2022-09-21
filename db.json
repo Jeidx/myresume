@@ -4,6 +4,16 @@
         "name": 1,
         "img": "img/tesla.png",
         "link": "https://jeidx.github.io/"
+    },{
+        "preloadText": "REACT",
+        "name": 1,
+        "img": "img/adminpanel.png",
+        "link": "https://auth-beta-ten.vercel.app/"
+    },{
+        "preloadText": "JS JSON",
+        "name": 1,
+        "img": "img/manga.png",
+        "link": "https://jeidx.github.io/mangaApi/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
@@ -15,57 +25,16 @@
         "img": "img/testlogo.png",
         "link": "https://jeidx.github.io/verstka-tz/"
     }, {
-        "preloadText": "HTML CSS",
-        "name": 1,
-        "img": "img/табуретки_1.png",
-        "link": "https://jeidx.github.io/taburetki/"
-    }, {
-        "preloadText": "PARALAX.js",
-        "name": 1,
-        "img": "img/island.png",
-        "link": "https://jeidx.github.io/sunshine/"
-    },  {
         "preloadText": "HTML CSS JS",
         "name": 1,
         "img": "img/robot.png",
         "link": "https://jeidx.github.io/robot/"
-    }, 
-    {
-        "preloadText": "JS API",
-        "name": 1,
-        "img": "img/world.png",
-        "link": "https://jeidx.github.io/cnf/"
     }, {
         "preloadText": "HTML CSS",
         "name": 1,
         "img": "img/travel.png",
         "link": "https://jeidx.github.io/3projectzaliv/"
-    }, {
-        "preloadText": "HTML CSS",
-        "name": 1,
-        "img": "img/blog.png",
-        "link": "https://jeidx.github.io/12222/"
-    }, {
-        "preloadText": "REACT",
-        "name": 1,
-        "img": "img/chatjs.png",
-        "link": "https://chatsapp-pi.vercel.app/"
-    }, {
-        "preloadText": "HTML CSS",
-        "name": 1,
-        "img": "img/marble.png",
-        "link": "https://jeidx.github.io/2st-project-fixed/#"
-    }, {
-        "preloadText": "HTML CSS",
-        "name": 1,
-        "img": "img/sushi.png",
-        "link": "https://jeidx.github.io/sushi.test/"
-    }, {
-        "preloadText": "REACT",
-        "name": 1,
-        "img": "img/poke.png",
-        "link": "https://vigilant-edison-ccf897.netlify.app/"
-    }, {
+    },{
         "preloadText": "JS CSS HTML",
         "name": 1,
         "img": "img/todo.png",
