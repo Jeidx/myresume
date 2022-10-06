@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded',() => {
     const worksListul = document.querySelector('.person-works_container__list'),
             skillsList = document.querySelector('.skills_list');
 
-           
+    preload();
+
     async function fetchDataCards(){
         fetch('db.json')
             .then(res => res.json())
@@ -123,6 +124,16 @@ window.addEventListener('DOMContentLoaded',() => {
             checkbox.checked = false;
         }
     },300);
+
+    function preload(){
+        let item = document.querySelector('.preload');
+        let bodyOfhtml = document.querySelector('body');
+        bodyOfhtml.classList.add('locked');
+        setTimeout(() => {
+            item.classList.add('disable');
+            bodyOfhtml.classList.remove('locked');
+        }, 3000)
+    }
 
     
     //createElementsList(arrayOfWorks,skillsListItems);
