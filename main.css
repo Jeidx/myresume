@@ -346,6 +346,7 @@ label
     cursor: pointer;
     transition: 0.3s ease background-color;
     overflow: hidden;
+    z-index: 99;
 }
 
 #star

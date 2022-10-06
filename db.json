@@ -10,6 +10,11 @@
         "img": "img/adminpanel.png",
         "link": "https://auth-beta-ten.vercel.app/"
     },{
+        "preloadText": "REACT",
+        "name": 1,
+        "img": "img/dash.png",
+        "link": "https://lustrous-sundae-2a13e3.netlify.app/"
+    },{
         "preloadText": "JS JSON",
         "name": 1,
         "img": "img/manga.png",
