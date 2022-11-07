@@ -337,8 +337,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endCo
 .skills_list-item-info{
     opacity: 0;
     position: absolute;
-    bottom: 35px;
-    left: 0;
+    bottom: 40px;
+    left: 5px;
     background-color: rgb(82, 109, 230);
     padding: 15px;
     font-size: 13px;
