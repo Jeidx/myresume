@@ -20,11 +20,6 @@
         "img": "img/tesla.png",
         "link": "https://jeidx.github.io/"
     },{
-        "preloadText": "JS JSON",
-        "name": 1,
-        "img": "img/manga.png",
-        "link": "https://jeidx.github.io/mangaApi/"
-    }, {
         "preloadText": "HTML CSS",
         "name": 1,
         "img": "img/zabota.png",
@@ -56,22 +51,28 @@
         "link": "https://jeidx.github.io/weatherapi/"
     }],
     [{
-        "about": "язык для структурирования и представления содержимого всемирной паутины",
+        "aboutRU": "язык для структурирования и представления содержимого всемирной паутины",
+        "aboutEng": "language for structuring and visiting the world wide web",
         "name": "HTML5"
     }, {
-        "about": "формальный язык описания внешнего вида документа, написанного с использованием языка разметки",
+        "aboutEng": "formal language for describing the appearance of a document",
+        "aboutRU": "формальный язык описания внешнего вида документа, написанного с использованием языка разметки",
         "name": "CSS3"
     }, {
-        "about": "мультипарадигменный язык программирования",
+        "aboutEng": "multi-paradigm programming language",
+        "aboutRU": "мультипарадигменный язык программирования",
         "name": "JavaScript"
     }, {
-        "about": "JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов",
+        "aboutEng": "Open source JavaScript library for developing user interfaces",
+        "aboutRU": "JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов",
         "name": "React"
     }, {
-        "about": "распределённая система управления версиями",
+        "aboutEng": "distributed version control system",
+        "aboutRU": "распределённая система управления версиями",
         "name": "Git"
     }, {
-        "about": "метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей",
+        "aboutEng": "a CSS-based metalanguage designed to increase the abstraction level of CSS code and simplify cascading style sheet files",
+        "aboutRU": "метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей",
         "name": "Scss"
     }]
 ]

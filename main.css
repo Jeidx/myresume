@@ -13,7 +13,11 @@ html {
     position: relative;
 }
 body{
-    background-image: url(img/bg.jpg);
+    background: rgb(24,19,140);
+    background: -moz-linear-gradient(32deg, rgba(24,19,140,1) 3%, rgba(26,199,235,0.7091211484593838) 33%, rgba(219,230,158,1) 94%);
+    background: -webkit-linear-gradient(32deg, rgba(24,19,140,1) 3%, rgba(26,199,235,0.7091211484593838) 33%, rgba(219,230,158,1) 94%);
+    background: linear-gradient(32deg, rgba(24,19,140,1) 3%, rgba(26,199,235,0.7091211484593838) 33%, rgba(219,230,158,1) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#18138c",endColorstr="#dbe69e",GradientType=1);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,7 +50,11 @@ body.locked{
     max-width: 150px;
 }
 .newbg{
-    background-image: url(img/bgtree.jpg);
+    background: rgb(0,0,0);
+background: -moz-linear-gradient(40deg, rgba(0,0,0,1) 33%, rgba(13,244,214,0.7091211484593838) 71%, rgba(0,0,0,1) 97%);
+background: -webkit-linear-gradient(40deg, rgba(0,0,0,1) 33%, rgba(13,244,214,0.7091211484593838) 71%, rgba(0,0,0,1) 97%);
+background: linear-gradient(40deg, rgba(0,0,0,1) 33%, rgba(13,244,214,0.7091211484593838) 71%, rgba(0,0,0,1) 97%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 .white-text-color{
     color: #fff !important;
@@ -463,6 +471,19 @@ label
     background-color: rgb(24, 28, 49);
 }
 /* CHECKBOX */
+
+/* LangSwitcher */
+.lang-switch-wrp{
+    display: inline-block;
+    border:  5px solid #4982bb;;
+    background-color: #a8deee;
+    padding: 10px;
+    border-radius: 50%;
+}
+.lang-switch-wrp_btn{
+    font-size: 25px;
+}
+/* LangSwitcher */
 
 
 /* RESPONSIVE */
