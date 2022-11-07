@@ -139,7 +139,7 @@ window.addEventListener('DOMContentLoaded',() => {
         setTimeout(() => {
             item.classList.add('disable');
             bodyOfhtml.classList.remove('locked');
-        }, 2000)
+        }, 300)
     }
     //МУЛЬТИЯЗЫЧНОСТЬ
     let arrOfWords = [
