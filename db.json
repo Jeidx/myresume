@@ -51,12 +51,12 @@
         "link": "https://jeidx.github.io/weatherapi/"
     }],
     [{
-        "aboutRU": "мова для структурування та подання вмісту всесвітньої павутини",
+        "aboutRU": "мова для структурування та подання вмiсту всесвiтньої павутини",
         "aboutEng": "language for structuring and visiting the world wide web",
         "name": "HTML5"
     }, {
         "aboutEng": "formal language for describing the appearance of a document",
-        "aboutRU": "формальна мова опису зовнішнього вигляду документа, написаного з використанням мови розмітки",
+        "aboutRU": "формальна мова опису зовнiшнього вигляду документа, написаного з використанням мови розмiтки",
         "name": "CSS3"
     }, {
         "aboutEng": "multi-paradigm programming language",
@@ -64,15 +64,15 @@
         "name": "JavaScript"
     }, {
         "aboutEng": "Open source JavaScript library for developing user interfaces",
-        "aboutRU": "JavaScript-бібліотека з відкритим вихідним кодом для розробки інтерфейсів користувача",
+        "aboutRU": "JavaScript-бiблiотека з вiдкритим вихiдним кодом для розробки iнтерфейсiв користувача",
         "name": "React"
     }, {
         "aboutEng": "distributed version control system",
-        "aboutRU": "розподілена система управління версіями",
+        "aboutRU": "розподiлена система управлiння версiями",
         "name": "Git"
     }, {
         "aboutEng": "a CSS-based metalanguage designed to increase the abstraction level of CSS code and simplify cascading style sheet files",
-        "aboutRU": "метамова на основі CSS, призначена для збільшення рівня абстракції CSS-коду та спрощення файлів каскадних таблиць стилів",
+        "aboutRU": "метамова на основi CSS, призначена для збiльшення рiвня абстракцiї CSS-коду та спрощення файлiв каскадних таблиць стилiв",
         "name": "Scss"
     }]
 ]
