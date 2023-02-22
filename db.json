@@ -2,6 +2,11 @@
     [{
         "preloadText": "REACT",
         "name": 1,
+        "img": "img/market.png",
+        "link": "https://marketplace-five-xi.vercel.app/"
+    },{
+        "preloadText": "REACT",
+        "name": 1,
         "img": "img/adminpanel.png",
         "link": "https://auth-beta-ten.vercel.app/"
     },{
